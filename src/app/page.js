@@ -307,7 +307,9 @@ export default function Home() {
                           <p className="text-gray-500">{testimonial.role}</p>
                         </div>
                       </div>
-                      <p className="text-lg italic">"{testimonial.text}"</p>
+                      <p className="text-lg italic">
+                        &ldquo;{testimonial.text}&rdquo;
+                      </p>
                     </div>
                   </div>
                 ))}

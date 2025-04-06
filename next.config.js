@@ -22,26 +22,6 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === "production",
   },
   webpack: (config, { dev, isServer }) => {
-    // Optimize react-icons
-    config.module.rules.push({
-      test: /react-icons\/.*\/(.*)$/,
-      loader: "babel-loader",
-      options: {
-        presets: ["@babel/preset-env"],
-        plugins: [
-          [
-            "transform-imports",
-            {
-              "react-icons": {
-                transform: "react-icons/${member}",
-                preventFullImport: true,
-              },
-            },
-          ],
-        ],
-      },
-    });
-
     // Enable tree shaking for production builds
     if (!dev && !isServer) {
       config.optimization = {

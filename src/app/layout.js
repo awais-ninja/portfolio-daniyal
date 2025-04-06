@@ -1,21 +1,44 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/Navigation";
-
-const inter = Inter({ subsets: ["latin"] });
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Muhammad Daniyal Faheem | Fashion Portfolio",
+  title: "Muhammad Daniyal Faheem - Fashion Buyer & Sourcing Specialist",
   description:
-    "Professional fashion portfolio showcasing creative direction, styling, and design work by Muhammad Daniyal Faheem",
+    "Professional fashion buyer and sourcing specialist with expertise in retail operations, merchandising, and sourcing.",
+  other: {
+    link: [
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preconnect",
+        href: "https://www.instagram.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preconnect",
+        href: "https://www.linkedin.com",
+        crossOrigin: "anonymous",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-white text-gray-900`}>
+      <body>
         <Navigation />
-        <main className="min-h-screen pt-20">{children}</main>
+        {children}
+        <Footer />
       </body>
     </html>
   );

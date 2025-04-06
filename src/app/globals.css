@@ -4,135 +4,88 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-}
-
-.section-padding {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-@media (min-width: 768px) {
-  .section-padding {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
 }
 
 .container-custom {
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
-@media (min-width: 640px) {
-  .container-custom {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container-custom {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-.heading-1 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-}
-
-@media (min-width: 768px) {
-  .heading-1 {
-    font-size: 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .heading-1 {
-    font-size: 3.75rem;
-  }
-}
-
-.heading-2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-}
-
-@media (min-width: 768px) {
-  .heading-2 {
-    font-size: 2.25rem;
-  }
-}
-
-.heading-3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-@media (min-width: 768px) {
-  .heading-3 {
-    font-size: 1.875rem;
-  }
+/* Button styles */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg bg-black text-white hover:bg-gray-800 transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg hover:scale-105;
 }
 
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid transparent;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 0.375rem;
-  color: white;
-  background-color: black;
-  transition: all 0.2s ease-in-out;
-}
-
-.btn-primary:hover {
-  background-color: #1f2937;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg bg-black text-white hover:bg-gray-800 transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg;
 }
 
 .btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid black;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 0.375rem;
-  color: black;
-  background-color: white;
-  transition: all 0.2s ease-in-out;
+  @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-lg bg-gray-100 text-gray-800 hover:bg-gray-200 transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md hover:scale-105;
 }
 
-.btn-secondary:hover {
-  background-color: #f9fafb;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+/* Link styles */
+.link {
+  @apply text-blue-600 hover:text-blue-800 transition-colors duration-200;
 }
 
-/* Animation Classes */
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+}
+
+/* Input styles */
+.input {
+  @apply block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500;
+}
+
+/* Text styles */
+.heading-1 {
+  @apply text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl;
+}
+
+.heading-2 {
+  @apply text-3xl font-bold tracking-tight sm:text-4xl;
+}
+
+.heading-3 {
+  @apply text-2xl font-bold tracking-tight sm:text-3xl;
+}
+
+/* Animation classes */
 .fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
+  @apply opacity-0 transition-opacity duration-500;
 }
 
-@keyframes fadeIn {
+.fade-in.visible {
+  @apply opacity-100;
+}
+
+/* Modal Animations */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes backdropFadeIn {
   from {
     opacity: 0;
   }
@@ -141,66 +94,7 @@ body {
   }
 }
 
-.slide-in-left {
-  opacity: 0;
-  transform: translateX(-50px);
-  animation: slideInLeft 0.8s ease-out forwards;
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.slide-in-right {
-  opacity: 0;
-  transform: translateX(50px);
-  animation: slideInRight 0.8s ease-out forwards;
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Card Hover Effects */
-.card-hover {
-  transition: all 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-/* Skill Bar Animation */
-@keyframes skillBarFill {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--skill-level);
-  }
-}
-
-.skill-bar-fill {
-  animation: skillBarFill 1.5s ease-out forwards;
-}
-
-/* Custom Scrollbar */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -216,4 +110,24 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+/* Cursor styles */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles */
+*:focus {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-blue-500 text-white;
 }

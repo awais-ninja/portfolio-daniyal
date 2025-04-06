@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { FaEnvelope, FaPhone, FaLinkedin, FaInstagram } from "react-icons/fa";
+import Link from "./Link";
+import { FaEnvelope, FaPhone, FaLinkedin, FaInstagram } from "react-icons/fa6";
 
 const Contact = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,7 +78,7 @@ const Contact = () => {
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8">
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
               <div className="space-y-6">
-                <a
+                <Link
                   href="mailto:daniyalfaheem6666@gmail.com"
                   className="flex items-center space-x-4 group"
                 >
@@ -90,8 +91,8 @@ const Contact = () => {
                       daniyalfaheem6666@gmail.com
                     </p>
                   </div>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="tel:+447404072424"
                   className="flex items-center space-x-4 group"
                 >
@@ -104,13 +105,13 @@ const Contact = () => {
                       +44 7404 072424
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
 
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
                 <div className="flex space-x-4">
-                  <a
+                  <Link
                     href="https://www.linkedin.com/in/muhammaddaniyalfashion/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -119,8 +120,8 @@ const Contact = () => {
                   >
                     <FaLinkedin className="text-xl" aria-hidden="true" />
                     <span className="sr-only">LinkedIn</span>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="https://www.instagram.com/daniyalfaheem_/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -129,7 +130,7 @@ const Contact = () => {
                   >
                     <FaInstagram className="text-xl" aria-hidden="true" />
                     <span className="sr-only">Instagram</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

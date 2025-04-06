@@ -21,34 +21,6 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
-  webpack: (config, { dev, isServer }) => {
-    // Enable tree shaking for production builds
-    if (!dev && !isServer) {
-      config.optimization = {
-        ...config.optimization,
-        usedExports: true,
-        splitChunks: {
-          chunks: "all",
-          minSize: 20000,
-          maxSize: 244000,
-          cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name(module) {
-                const packageName = module.context.match(
-                  /[\\/]node_modules[\\/](.*?)([\\/]|$)/
-                )[1];
-                return `vendor.${packageName.replace("@", "")}`;
-              },
-              chunks: "all",
-            },
-          },
-        },
-      };
-    }
-
-    return config;
-  },
 };
 
 module.exports = nextConfig;

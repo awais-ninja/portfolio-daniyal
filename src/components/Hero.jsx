@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "./Link";
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
 
 const Hero = ({ setIsCVModalOpen }) => {
   return (

@@ -9,7 +9,7 @@ import {
   FaPhone,
   FaHeart,
   FaWhatsapp,
-} from "react-icons/fa";
+} from "react-icons/fa6";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();

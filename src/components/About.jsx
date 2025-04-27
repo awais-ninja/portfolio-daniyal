@@ -43,7 +43,7 @@ const About = () => {
             About Me
           </span>
           <h2 className="text-3xl md:text-4xl font-bold">
-            My Background & Journey
+            Profile & Education
           </h2>
         </div>
 
@@ -60,25 +60,41 @@ const About = () => {
               Education & Background
             </h3>
             <p className="text-lg mb-8 text-gray-700">
-              Bachelor of Fashion graduate with a passion for innovative design
-              and sustainable fashion practices. My approach combines
-              traditional techniques with modern aesthetics, creating unique
-              pieces that tell a story.
+              Fashion Merchandiser with vast expertise in both retail and
+              production, focusing on merchandising planning, sourcing, product
+              development, and vendor partnerships. Excellent analytical
+              capabilities, industrial production abilities, and an extensive
+              understanding of the supply chain. Experienced with global brands
+              such as The North Face, Trespass, Richfield, and Jacob Smith, as
+              well as a strong academic background in Fashion Management and
+              Merchandising.
             </p>
             <div className="space-y-6">
               <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors transform hover:scale-[1.02] duration-300">
                 <h4 className="font-bold text-xl mb-2 text-gray-800">
                   Education
                 </h4>
-                <p className="text-gray-700">Bachelor of Fashion</p>
-              </div>
-              <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors transform hover:scale-[1.02] duration-300">
-                <h4 className="font-bold text-xl mb-2 text-gray-800">
-                  Specialization
-                </h4>
-                <p className="text-gray-700">
-                  Fashion Design & Creative Direction
+                <p className="text-gray-700 font-semibold">
+                  De Montfort University | Leicester | England
                 </p>
+                <p className="text-gray-700">
+                  BSc (Hons) Fashion Management (2024-2025)
+                </p>
+                <p className="text-gray-700">
+                  Fashion Buying, Fashion Marketing, Fashion Merchandising,
+                  Fashion Business Innovation & R&D
+                </p>
+                <p className="text-gray-700">
+                  Asian Institute of Fashion Design | Karachi
+                </p>
+                <p className="text-gray-700">
+                  Diploma in Fashion Marketing & Merchandising (2022-2024) |
+                  CGPA: 3.16
+                </p>
+                <p className="text-gray-700">
+                  Pakistan Hoisery Manufacturing Institute | Karachi
+                </p>
+                <p className="text-gray-700">Merchandising Course (2023)</p>
               </div>
             </div>
           </div>
@@ -99,15 +115,15 @@ const About = () => {
               <div className="flex">
                 <div className="w-24 flex-shrink-0 flex justify-center">
                   <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center text-white font-bold hover:bg-gray-800 transition-colors transform hover:scale-110 duration-300 shadow-md">
-                    2023
+                    2024
                   </div>
                 </div>
                 <div className="flex-grow bg-gray-50 p-5 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors transform hover:scale-[1.02] duration-300 ml-4">
                   <h4 className="font-bold text-xl text-gray-800 mb-2">
-                    Sustainable Fashion Collection
+                    De Montfort University, Leicester
                   </h4>
                   <p className="text-gray-700">
-                    Launched my sustainable fashion collection
+                    BSc (Hons) Fashion Management (2024-2025)
                   </p>
                 </div>
               </div>
@@ -119,25 +135,27 @@ const About = () => {
                 </div>
                 <div className="flex-grow bg-gray-50 p-5 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors transform hover:scale-[1.02] duration-300 ml-4">
                   <h4 className="font-bold text-xl text-gray-800 mb-2">
-                    Fashion Design Graduation
+                    Asian Institute of Fashion Design, Karachi
                   </h4>
                   <p className="text-gray-700">
-                    Graduated with honors in Fashion Design
+                    Diploma in Fashion Marketing & Merchandising (2022-2024) |
+                    CGPA: 3.16
                   </p>
                 </div>
               </div>
               <div className="flex">
                 <div className="w-24 flex-shrink-0 flex justify-center">
                   <div className="w-20 h-20 bg-black rounded-full flex items-center justify-center text-white font-bold hover:bg-gray-800 transition-colors transform hover:scale-110 duration-300 shadow-md">
-                    2021
+                    2023
                   </div>
                 </div>
                 <div className="flex-grow bg-gray-50 p-5 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors transform hover:scale-[1.02] duration-300 ml-4">
                   <h4 className="font-bold text-xl text-gray-800 mb-2">
-                    Fashion House Internship
+                    Pakistan Hoisery Manufacturing Institute, Karachi
                   </h4>
                   <p className="text-gray-700">
-                    Internship at leading fashion house
+                    Merchandising Course (Certified by Sindh Textile Technical
+                    Board)
                   </p>
                 </div>
               </div>

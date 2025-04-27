@@ -144,14 +144,14 @@ const Footer = () => {
           </p>
           <p className="text-gray-500 text-sm mt-2 flex items-center justify-center">
             Made with <FaHeart className="text-red-500 mx-1" /> by{" "}
-            <a
-              href="https://wa.me/+44 7443 098117"
+            <Link
+              href="https://api.whatsapp.com/send?phone=447443098117"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:text-blue-300 ml-1"
             >
               Awais Ahmad
-            </a>
+            </Link>
           </p>
         </div>
       </div>

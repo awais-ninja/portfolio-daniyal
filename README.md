@@ -20,6 +20,25 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Environment Variables
+
+This project uses environment variables to store sensitive information. To set up your environment:
+
+1. Copy the `.env.example` file to `.env`:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Update the `.env` file with your actual values:
+
+   ```
+   # Crisp Chat
+   NEXT_PUBLIC_CRISP_WEBSITE_ID=your_crisp_website_id_here
+   ```
+
+3. For production, make sure to set these environment variables in your hosting platform (e.g., Vercel).
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

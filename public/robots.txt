@@ -1,4 +1,16 @@
 User-agent: *
 Allow: /
+Allow: /about
+Allow: /skills
+Allow: /experience
+Allow: /portfolio
+Allow: /contact
+Allow: /cv
 
-Sitemap: https://yourdomain.com/sitemap.xml 
+# Disallow admin or private areas if you have any
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay: 10
+
+Sitemap: https://vercel.com/awais-s-projects-d2c2527e/portfolio-daniyal-7ttt/sitemap.xml 

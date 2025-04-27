@@ -3,36 +3,10 @@ import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import { metadata as siteMetadata } from "./metadata";
+import JsonLd from "../components/JsonLd";
 
-export const metadata = {
-  title: "Muhammad Daniyal Faheem - Fashion Buyer & Sourcing Specialist",
-  description:
-    "Professional fashion buyer and sourcing specialist with expertise in retail operations, merchandising, and sourcing.",
-  other: {
-    link: [
-      {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preconnect",
-        href: "https://www.instagram.com",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preconnect",
-        href: "https://www.linkedin.com",
-        crossOrigin: "anonymous",
-      },
-    ],
-  },
-};
+export const metadata = siteMetadata;
 
 export default function RootLayout({ children }) {
   return (
@@ -54,9 +28,10 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Navigation />
-        {children}
+        <main>{children}</main>
         <Footer />
         <Analytics />
+        <JsonLd />
       </body>
     </html>
   );

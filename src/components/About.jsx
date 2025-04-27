@@ -72,7 +72,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 hover:border-gray-300 transition-colors transform hover:scale-[1.02] duration-300">
                 <h4 className="font-bold text-xl mb-2 text-gray-800">
-                  Education
+                  Latest Education
                 </h4>
                 <p className="text-gray-700 font-semibold">
                   De Montfort University | Leicester | England

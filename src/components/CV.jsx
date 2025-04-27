@@ -1,7 +1,18 @@
 import React from "react";
 import Link from "./Link";
+import { FaDownload } from "react-icons/fa6";
 
 const CV = () => {
+  const handleDownload = () => {
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = "/cv/Muhammad_Daniyal_CV.pdf";
+    link.download = "Muhammad_Daniyal_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="bg-white p-8 max-w-4xl mx-auto shadow-lg rounded-lg">
       {/* Header */}
@@ -28,6 +39,17 @@ const CV = () => {
           <Link href="#portfolio" className="hover:underline">
             📁 Portfolio
           </Link>
+        </div>
+
+        {/* Download CV Button */}
+        <div className="mt-6">
+          <button
+            onClick={handleDownload}
+            className="inline-flex items-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors duration-300 shadow-md hover:shadow-lg"
+          >
+            <FaDownload className="mr-2" />
+            Download CV
+          </button>
         </div>
       </div>
 
